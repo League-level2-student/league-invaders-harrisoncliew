@@ -13,14 +13,17 @@ public class Projectile extends GameObject {
 	
 	public Projectile(int x, int y, int width, int height) {
 		super(x, y, width, height);
-		speed = 1;
+		speed = 5;
 		if (needImage) {
 		    loadImage ("bullet.png");
 		}
 	}
 	
 	void update() {
+		super.update();
 		y-=speed;
+		
+
 	}
 	void draw(Graphics g) {
 		if (gotImage) {

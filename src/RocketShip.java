@@ -12,7 +12,7 @@ public class RocketShip extends GameObject {
 
 	public RocketShip(int x, int y, int width, int height) {
 		super(x, y, width, height);
-		this.speed = 10;
+		this.speed = 20;
 		if (needImage) {
 			loadImage("rocket.png");
 		}
@@ -22,6 +22,10 @@ public class RocketShip extends GameObject {
 		return new Projectile(x + width / 2, y, 10, 10);
 	}
 
+	void update() {
+		super.update();
+		
+	}
 	void draw(Graphics g) {
 		if (gotImage) {
 			g.drawImage(image, x, y, width, height, null);
